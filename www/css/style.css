@@ -1,0 +1,12 @@
+.navig {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 8px;
+
+  .navig__item a {
+    padding: 4px;
+    text-decoration: none;
+    color: blue;
+  }
+}
