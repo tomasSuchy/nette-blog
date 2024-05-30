@@ -3,13 +3,22 @@
         'name' => 'nette/web-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c018b503bbb560d79ee64c62ce67c474c8ddb2ec',
+        'reference' => '49852532c480a5a3163dcd8fc2e2629b186d72f5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'contributte/webpack' => array(
+            'pretty_version' => '2.3.1',
+            'version' => '2.3.1.0',
+            'reference' => '4104414e01a55c0962b8db7b56ea2e9745e67e5f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../contributte/webpack',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'latte/latte' => array(
             'pretty_version' => 'v3.0.14',
             'version' => '3.0.14.0',
@@ -175,7 +184,7 @@
         'nette/web-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c018b503bbb560d79ee64c62ce67c474c8ddb2ec',
+            'reference' => '49852532c480a5a3163dcd8fc2e2629b186d72f5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

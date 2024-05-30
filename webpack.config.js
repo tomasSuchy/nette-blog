@@ -1,53 +1,39 @@
 const path = require('path');
-const ROOT_PATH = __dirname;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: './www/js/index.js',
+  entry: './www/js/app.js',
+  target: 'async-node',
   mode: (process.env.NODE_ENV === 'production') ? 'production' : 'development',
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
+  devtool: 'inline-source-map',
   devServer: {
-    publicPath: '/assets/',
-  },
-  resolve: {
-    extensions: [ '.js', '.css' ],
-    alias: {
-      '@': path.resolve(__dirname, '../www'),
-    },
+    static: './www',
+    watchFiles: ['www/**/*'],
+    hot: true,
   },
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
-        sideEffects: true,
+        test: /\.(sa|sc|c)ss$/i,
         use: [
-          {
-            loader: 'thread-loader',
-            options: {
-              workerParallelJobs: 2,
-            }
-          },
-          {
-            loader: 'cache-loader',
-            options: {
-              cacheDirectory: 'build/.cache/css-loader',
-              cacheIdentifier: 'cache-loader',
-            },
-          },
-          'css-loader',
-          'postcss-loader',
-          {
-            loader: 'sass-loader',
-          }
-        ]
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "style-loader",
+          "css-loader"
+        ],
       },
-    ]
+      {
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        type: "asset",
+      },
+    ],
   },
+  plugins: [].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/build'),
-    clean: true,
+    path: path.join(__dirname, 'www', 'assets'),
   },
-  watch: true,
 };

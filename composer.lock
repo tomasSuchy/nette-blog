@@ -4,8 +4,85 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13630f98e82024ad3952aa0e0b23cfdd",
+    "content-hash": "662610fec90605adc8f2e8324222a393",
     "packages": [
+        {
+            "name": "contributte/webpack",
+            "version": "2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contributte/webpack.git",
+                "reference": "4104414e01a55c0962b8db7b56ea2e9745e67e5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contributte/webpack/zipball/4104414e01a55c0962b8db7b56ea2e9745e67e5f",
+                "reference": "4104414e01a55c0962b8db7b56ea2e9745e67e5f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "nette/di": "^3.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "latte/latte": "^2.4 || ^3.0",
+                "nette/application": "^3.0",
+                "nette/bootstrap": "^3.0",
+                "nette/tester": "^2.0",
+                "phpstan/phpstan": "^1.0",
+                "symplify/easy-coding-standard": "^12.0",
+                "tracy/tracy": "^2.4"
+            },
+            "suggest": {
+                "latte/latte": "to enable Latte integration via {webpack} macro",
+                "tracy/tracy": "to enable asset debugging in the debug bar panel"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Contributte\\Webpack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jiří Pudil",
+                    "email": "me@jiripudil.cz",
+                    "homepage": "https://jiripudil.cz"
+                }
+            ],
+            "description": "Webpack integration for Nette Framework.",
+            "homepage": "https://github.com/contributte/webpack",
+            "keywords": [
+                "nette",
+                "webpack"
+            ],
+            "support": {
+                "email": "me@jiripudil.cz",
+                "issues": "https://github.com/contributte/webpack/issues",
+                "source": "https://github.com/contributte/webpack/tree/2.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://contributte.org/partners.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/f3l1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-01-05T12:59:56+00:00"
+        },
         {
             "name": "latte/latte",
             "version": "v3.0.14",

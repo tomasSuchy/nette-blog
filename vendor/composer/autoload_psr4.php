@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Thanks\\' => array($vendorDir . '/symfony/thanks/src'),
+    'Contributte\\Webpack\\' => array($vendorDir . '/contributte/webpack/src'),
     'App\\' => array($baseDir . '/app'),
 );

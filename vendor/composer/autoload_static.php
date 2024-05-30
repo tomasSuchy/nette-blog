@@ -15,6 +15,10 @@ class ComposerStaticInit371471726cf6a317441d14d0f1a8a245
         array (
             'Symfony\\Thanks\\' => 15,
         ),
+        'C' => 
+        array (
+            'Contributte\\Webpack\\' => 20,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -25,6 +29,10 @@ class ComposerStaticInit371471726cf6a317441d14d0f1a8a245
         'Symfony\\Thanks\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/thanks/src',
+        ),
+        'Contributte\\Webpack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/contributte/webpack/src',
         ),
         'App\\' => 
         array (
